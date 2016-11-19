@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="text_val" cols="30" rows="10"></textarea>
+<input type="button" value="setdata">
+<input type="button" value="getdata">
+</body>
+<script>
+    var setbtn=document.querySelector("input");
+    var getbtn=document.querySelectorAll("input")[1];
+    var textval=document.querySelector("#text_val");
+    setbtn.addEventListener("click",function () {
+        sessionStorage["fengchao"]=textval.value;
+    })
+    getbtn.addEventListener("click",function () {
+        textval.value=sessionStorage["fengchao"];
+    })
+</script>
+</html>

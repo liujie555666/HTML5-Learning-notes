@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="text_val" cols="30" rows="10"></textarea>
+<input type="button" value="setdata">
+<input type="button" value="getdata">
+<input type="button" value="remove">
+<input type="button" value="clear">
+</body>
+<script>
+    var setbtn=document.querySelector("input");
+    var getbtn=document.querySelectorAll("input")[1];
+    var removebtn=document.querySelectorAll("input")[2];
+    var clearbtn=document.querySelectorAll("input")[3];
+    var textval=document.querySelector("#text_val");
+    setbtn.addEventListener("click",function () {
+        localStorage["fengchao"]=textval.value;
+    });
+    getbtn.addEventListener("click",function () {
+//两种方式
+        //        textval.value=localStorage["fengchao"];
+        textval.value=localStorage.getItem("fengchao");
+
+    });
+    removebtn.addEventListener("click",function () {
+       localStorage.removeItem("fengchao");
+    });
+    clearbtn.addEventListener("click",function () {
+   localStorage.clear();
+    })
+
+
+</script>
+</html>

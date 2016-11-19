@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+</header>
+<script>
+    (function () {
+        window.addEventListener("online",function () {
+           document.querySelector("header").innerHTML="<h1>网络建立链接</h1>"
+        })
+        window.addEventListener("offline",function () {
+           document.querySelector("header").innerHTML="<h1>网络断开链接</h1>"
+        })
+    })();
+</script>
+
+</body>
+</html>

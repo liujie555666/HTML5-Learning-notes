@@ -1,0 +1,9 @@
+@charset "UTF-8";
+body::before{
+    content: "css 注入内容";
+    font-size: 80px;
+}
+body::after{
+    content: "你好呀";
+    font-size: 60px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="05_多媒体api.html">视频</a>
+<button>前进</button>
+<button>后退</button>
+<button>刷新</button>
+<script>
+    (function () {
+       var btn1=document.querySelector("button");
+        var btn2=document.querySelectorAll("button")[1];
+        var btn3=document.querySelectorAll("button")[2];
+        btn1.addEventListener("click",function () {
+            window.history.forward()
+        });
+        btn2.addEventListener("click",function () {
+            window.history.back();
+        });
+        btn3.addEventListener("click",function () {
+            //刷新,如果里面不传参数的话就是刷新当前页面,
+            window.history.go();
+        });
+
+    })();
+</script>
+</body>
+</html>

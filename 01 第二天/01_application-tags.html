@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .myProgress{
+            background-color: teal;
+            color: red;
+            height: 100px;
+        }
+        .myProgress::-webkit-progress-bar{
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+<h2>DataList</h2>
+<input type="text" list="teachers">
+<datalist id="teachers">
+    <option value="段誉"></option>
+    <option value="陈冠希"></option>
+    <option value="宋喆"></option>
+</datalist>
+<h2>noautocomplete</h2>
+<input type="text" list="students" autocomplete="off"/>
+<datalist id="students" >
+    <option value="梅塞"></option>
+    <option value="BMV"></option>
+    <option value="揽胜"></option>
+</datalist>
+<h2>Right Menu</h2>
+<menu>
+    <!--<command type="command" label="publish">-->
+    <li>1122</li>
+    <li>22</li>
+    <li>11</li>
+</menu>
+<h2>details</h2>
+<details>
+    <summary>html5</summary>
+    asfsdgfdsghgf
+</details>
+<h2>meter</h2>
+<!--火狐支持-->
+<meter min="0" max="200" optimum="100" value="90">A+</meter>
+<h2>progress</h2>
+<progress value="75" max="100" class="myProgress">3/4comple</progress>
+
+
+</body>
+</html>

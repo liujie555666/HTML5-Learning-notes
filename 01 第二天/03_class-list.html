@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .act{
+    font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+<header class="container">
+    <h1 class="page-header">Element.class-list</h1>
+</header>
+<a href="06_hisstory.html">后退</a>
+<div class="container">
+    <nav class="navabar navdefault">
+        <a href="#" class="navbar-band">fangchao</a>
+        <a href="#" class="navbar-nav nav1">fangc11</a>
+        <ul class="nav navbar-nav">
+            <li class="act"><a href="#">home</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
+<script>
+    (function () {
+        //获取每一个li
+        var liEles=document.querySelectorAll(".nav li");
+        for(var i=0;i<liEles.length;i++){
+            liEles[i].addEventListener("mouseover",function () {
+                for(var m=0;m<liEles.length;m++){
+                    liEles[m].classList.remove("act");
+                }
+                this.classList.add("act");
+            });
+        }
+    })();
+</script>

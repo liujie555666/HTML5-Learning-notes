@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<video src="fun.mp4" controls id="vi"></video>
+<button>play</button>
+<button>pause</button>
+<button>load</button>
+<script>
+    var playBtn=document.querySelector("button");
+  var video=document.getElementById("vi");
+    playBtn.addEventListener("click",function () {
+//        video.paused?video.play():video.pause();
+        video.play();
+    });
+    var pausbtn=document.querySelectorAll("button")[1];
+    pausbtn.addEventListener("click",function () {
+        video.pause();
+    });
+    var loadbtn=document.querySelectorAll("button")[2];
+    loadbtn.addEventListener("click",function () {
+//        video.src="moive.ogg";
+        video.load();
+    })
+    video.addEventListener("play",function () {
+        console.log("12346");
+    });
+    video.addEventListener("pause",function () {
+       console.log("654321");
+    });
+    video.addEventListener("load",function () {
+       console.log("11111111")
+    });
+//    var timer=setInterval(function () {
+//        //视频当前播放的进度
+//        console.log(video.currentTime);
+//        //视频总长度
+//        console.log(video.duration);
+//    },500);
+    //通过该事件来报告
+    video.addEventListener("timeupdate",function () {
+        console.log(video.currentTime);
+    });
+    //判断视频能否播放
+    video.addEventListener("canplay",function () {
+        alert("我可以播放了");
+    });
+    video.addEventListener("ended",function () {
+        alert("播放完闭")
+    })
+</script>
+</body>
+</html>

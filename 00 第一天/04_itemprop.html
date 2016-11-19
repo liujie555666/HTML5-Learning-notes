@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构化数据标记</title>
+</head>
+<body>
+<ul id="list">
+
+</ul>
+<script>
+    var data = {
+        01: {
+            name: "张三",
+            age: 18
+        },
+        02: {
+            name: "李四", age: 19
+        },
+        03: {
+            name: "旺财", age: 30
+        }
+    }
+    var list=document.getElementById("list");
+    for(var key in data){
+        var item=data[key];
+        var liele=document.createElement("li");
+
+        //liele.innerHTML=item.name;
+
+        liele.appendChild(document.createTextNode(item.name));
+        liele.setAttribute("data-name",item.name);
+        liele.setAttribute("data-age",item.age);
+        list.appendChild(liele);
+        //给li绑定一个onclick事件
+//        liele.onclick=function () {
+//
+//        }
+    // 通过监听的方法给事件源绑定事件,方法不会覆盖
+    liele.addEventListener("click",function () {
+        alert(this.innerHTML);
+        console.log(this.dataset["name"]);
+        console.log(this.dataset["age"]);
+    });
+    }
+
+
+</script>
+</body>
+</html>
